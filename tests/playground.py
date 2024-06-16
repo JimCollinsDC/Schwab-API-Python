@@ -1,6 +1,5 @@
 import schwabdev
 from dotenv import load_dotenv
-from time import sleep
 import os
 
 
@@ -10,7 +9,8 @@ def main():
 
     # a "terminal emulator" to play with the API
     history = []
-    print("\n\nTerminal emulator")
+    print("\nTerminal emulator")
+    print("Enter code to execute.")
     while True:
         try:
             entered = input("Enter something to execute:\n")
@@ -23,7 +23,7 @@ def main():
                 history.append(entered)
             print(" ^^^^[succeeded]^^^^ ")
         except Exception as error:
-            print("There was an error in the command that you entered.")
+            print(" ^^^^[ERROR]^^^^ ")
             print(error)
 
 
